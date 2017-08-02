@@ -131,7 +131,8 @@ Number of sited involved, e.g distinct manifestations or workplaces striking
 * 0 - both no data and no physical places
 
 #### SSCALE
-Estimated scale of the protest. SNO is used when available, in other cases 
+Estimated scale of the protest. SNO is used when available, in other cases
+[...]  
 
 #### SITETYPE
 Site of protest 
@@ -143,8 +144,57 @@ Site of protest
 * 99 – no physical place
 
 #### DURATION
-Duration of the protest [1 – up to 2 hours / 2 – up to 12 hours / 3 – up to 24 hours / 4 – up to 48 hours / 5 – up to 1 week / 6 – up to 2 weeks / 7 – up to 1 month / 8 – up to 3 months / 9 – more than 3 months / 99 – not bound by time]
-CLAIM1 / CLAIM2
-Claims or issues raised during protest [1 – wage and other material gratification / 2 – government policy towards company / 3 – management policy / 4 – personal changes in management / 5 – collective agreements and guarantees / 6 – right to unionize / 7 – social dialogue / 8 – anti-privatization / 9 – pro-privatization / 10 – layoffs / 11 – pay due salary / 12 – bankruptcy or liquidation / 13 – atypical forms of employment / 20 – domestic policy concerning work and employment / 21 – domestic policy not concerning work and employment / 22 – cultural and religious issues / 99 – other]
-CLAIMDIR
-Direction of the claim, Marx or Polanyi-type protest [1 – workers’ initiative, offensive, ‘give more’, ‘do it’ / 2 – reaction to other actors’ actions, defensive, ‘do not take’, ‘do not do it’]
+Duration of the protest
+* 1 – up to 2 hours 
+* 2 – up to 12 hours 
+* 3 – up to 24 hours 
+* 4 – up to 48 hours 
+* 5 – up to 1 week 
+* 6 – up to 2 weeks 
+* 7 – up to 1 month 
+* 8 – up to 3 months 
+* 9 – more than 3 months 
+* 99 – not bound by time
+
+#### CLAIM1 / CLAIM2
+Claims or issues raised during protest. In most cases the first claim is the major one.
+* 1 – wage and other material gratification 
+* 2 – government policy towards company 
+* 3 – management policy 
+* 4 – personal changes in management 
+* 5 – collective agreements and guarantees 
+* 6 – right to unionize 
+* 7 – social dialogue 
+* 8 – anti-privatization 
+* 9 – pro-privatization 
+* 10 – layoffs 
+* 11 – pay due salary 
+* 12 – bankruptcy or liquidation 
+* 13 – atypical forms of employment 
+* 14 - conditions of work
+* 15 - investment
+* 16 - pension rights 
+* 20 – domestic policy concerning work and employment 
+* 21 – domestic policy not concerning work and employment 
+* 22 – cultural and religious issues 
+* 23 - political conflict
+* 99 – other
+
+#### CLAIMDIR
+Direction of the claim, Marx or Polanyi-type protest
+* 1 – workers’ initiative, offensive, ‘give more’, ‘do it’ 
+* 2 – reaction to other actors’ actions, defensive, ‘do not take’, ‘do not do it’
+
+#### RS 
+Response of the target 
+* 1 - positive, agrees, wants to continue talks, accepts claims
+* 2 - neutral, acknowledges protest
+* 3 - negative, disagrees, breaks talks, dismisses claims, takes action against protesters
+
+#### XXX
+Additional information for further analyses. There are just few keywords here:
+* death - someone died during or in consequence of the protest
+* international - protest is somehow international, takes place abroad or with foreign actors participating (that would be international / solidarity)
+* solidarity - newspaper mentions acts of solidarity from other workplaces, communities or unions beyond those already coded
+* vandalism - protest involves destruction of property
+* violence - protest involves violence against people
