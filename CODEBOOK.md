@@ -4,21 +4,27 @@ For the project "Union and networks. Workers' protests in Poland, 2004-2014", fu
 
 ## VARIABLES
 
-- *GwME* - Total number of mentions in the source "Gazeta Wyborcza"
+### GwME
+Total number of mentions in the source "Gazeta Wyborcza"
+
 - *YR* - Year
 - *MN* - Month
 - *TY* - Type of event
--- 1 - actual collective action
--- 2 - threat of collective actin
+* 1 - actual collective action
+* 2 - threat of collective actin
 - *CITY* - Location of the event, name of the town
--- 99 - nationwide
--- 1-17 - see *REGIO*
+* 99 - nationwide
+* 1-17 - see *REGIO*
 - *REGIO* - Voivodeship in which the event took place
--- 1 - ?
--- 2 - ?
--- 3 - ?
--- 4 - ?
--- 5 - ?
--- 6 - ?
--- 7 - ?
--- 8 - ?
+* 1 - ?
+* 2 - ?
+* 3 - ?
+* 4 - ?
+* 5 - ?
+* 6 - ?
+* 7 - ?
+* 8 - ?
+* 9 - ?
+* 10 - ?
+* 11 - ?
+
