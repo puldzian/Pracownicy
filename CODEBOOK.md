@@ -21,6 +21,16 @@ Location of the event, name of the town. If no city was mentioned:
 * 97 - nationwide
 * 99 - no physical place
 
+#### CSIZk
+City size in thousands (k) of population (approximated), based on various sources
+*  0 - not a city
+
+#### CCLASS
+City class / importance
+*  0 - none
+*  3 - voyvodeship capital
+* 99 - not a city
+
 #### REGION / REGIOAB
 Province in which the event took place
 * 1 - DS -  dolnośląskie - lower Silesian
