@@ -4,13 +4,13 @@ For the project "Union and networks. Workers' protests in Poland, 2004-2014", fu
 
 ## VARIABLES
 
-#### GwME
+#### Gw
 Total number of mentions in the source "Gazeta Wyborcza"
 
 #### YR, MN
 Year and month of the event
 
-#### TY 
+#### TYP
 Type of the event
 * 1 - actual collective action
 * 2 - threat of collective action
@@ -54,10 +54,17 @@ Province in which the event took place
 
 #### COMPANY
 Name of the company
-* 99 - no actual company
+*  0 - no data
+* 99 - not a proper company, see GROUP
 
-#### ECO
+#### GROUP
+Name of the group or category, if no COMPANY specified
+*  0 - no data
+* 99 - not a proper group, maybe check COMPANY
+
+#### EC
 Sector of the economy (PKD) 
+* 0 – no data
 * 1 – agriculture, forestry, fishing 
 * 2 – mining 
 * 3 – manufactoring and refining 
@@ -136,22 +143,29 @@ Repertoire type. If more then 2 types were employed, major or more radical were 
 * 9 - appeal, petition, open letter
 * 99 - other
 
-#### SNO
+#### SN0
 Number of sited involved, e.g distinct manifestations or workplaces striking
 * 0 - both no data and no physical places
+
+#### SN1
+Number of sited involved, e.g distinct manifestations or workplaces striking
+The difference is that the number of sites in NO DATA cases was approximated (if possible) or set to 1
+This allows us to count a 'minimal number of collective actions' in the database
+* 0 - no physical place
 
 #### SSCALE
 Estimated scale of the protest. SNO is used when available, in other cases
 [...]  
 
-#### SITETYPE
+#### SITE
 Site of protest 
-* 1 – company premises 
-* 2 – central state institution 
-* 3 – regional state institution 
-* 4 – other state or institution 
-* 5 – public space 
-* 99 – no physical place
+* 1 – COMP – company premises 
+* 2 – CNST – central state institution 
+* 3 – RGST – regional state institution 
+* 4 – OTST – other state or institution 
+* 5 – PUBL – public space
+* 6 – INFR – roads, rails, infrastructure
+* 9 – MDIA – media, social media, no physical place
 
 #### DURATION
 Duration of the protest
