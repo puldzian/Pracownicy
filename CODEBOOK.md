@@ -88,7 +88,7 @@ Sector of the economy (PKD)
 * 99 – NONE – not an economic actor, not applicable, other
 
 #### ACTNAME
-Names of actors involved, separated by slash. Acronyms used:
+Names of actors involved, separated by '/'. Acronyms used:
 * FA - Federacja Anarchistyczna
 * FZZ - Forum Związków Zawodowych
 * IP - OZZ Inicjatywa Pracownicza
@@ -215,7 +215,21 @@ Response of the target
 * 3 – NEG – negative, disagrees, breaks talks, dismisses claims, takes action against protesters
 
 #### VANDA
+Violence towards inanimate objects was used during the event
+* 0 - NO
+* 1 - YES
+
 #### VIOLE
+Violence towads people was used
+* 0 - NO
+* 1 - YES
+
 #### INTER
+Event was an act of international cooperation
+* 0 - NO
+* 1 - YES
+
 #### SOLID
-1/0 variables whether - respectively - vandalism (violence aimed at inanimate objects), violence (towards people), acts of international cooperation or acts of solidarity were sent or received by the organisers (to/from other groups or actors)
+Acts of solidary were sent or received by organisers (to/from other actors/groups)
+* 0 - NO
+* 1 - YES
