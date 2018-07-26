@@ -11,3 +11,8 @@ Lead investigator: Piotr P. Płucienniczak.
 * /papers/ - drafts and papers
 * /temp/ - experiments
 * /varia/ - additional materials
+
+
+## Changes
+18.07.26 - changed 99 to N in some cols to better handle NDs, DESC added, cleaning 
+

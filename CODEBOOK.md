@@ -29,7 +29,7 @@ City size in thousands (k) of population (approximated), based on various source
 City class / importance
 *  0 – none
 *  3 – voyvodeship capital
-* 99 – not a city
+*  N – not a city
 
 #### REGION / REGIOAB
 Province in which the event took place
@@ -50,7 +50,7 @@ Province in which the event took place
 * 15 – WL – wielkopolskie - Greater Poland
 * 16 – ZP – zachodniopomorskie - West Pomeranian
 * 97 – PL – nationwide
-* 99 – 99 – no physical place
+* NN – NN – no physical place
 
 #### COMPANY
 Name of the company
@@ -148,13 +148,13 @@ Repertoire type. If more then 2 types were employed, major or more radical were 
 
 #### SN0
 Number of sited involved, e.g distinct manifestations or workplaces striking
-* 0 – both no data and no physical places
+* 0 – no data or no physical places
 
 #### SN1
 Number of sited involved, e.g distinct manifestations or workplaces striking
 The difference is that the number of sites in NO DATA cases was approximated (if possible) or set to 1
 This allows us to count a 'minimal number of collective actions' in the database
-* 0 – no physical place
+* N – no physical place
 
 #### SITE
 Site of protest 
@@ -233,3 +233,6 @@ Event was an act of international cooperation
 Acts of solidary were sent or received by organisers (to/from other actors/groups)
 * 0 - NO
 * 1 - YES
+
+#### DESC
+Just a description
