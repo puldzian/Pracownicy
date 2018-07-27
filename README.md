@@ -14,5 +14,8 @@ Lead investigator: Piotr P. Płucienniczak.
 
 
 ## Changes
-18.07.26 - changed 99 to N in some cols to better handle NDs, DESC added, cleaning 
+18.07.26 - changed 99 to N in some cols to better handle NDs, DESC added, cleaning
+
+## Cleaning: TODO
+check PPL of biggest protests
 

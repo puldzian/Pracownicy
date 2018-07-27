@@ -148,13 +148,12 @@ Repertoire type. If more then 2 types were employed, major or more radical were 
 
 #### SN0
 Number of sited involved, e.g distinct manifestations or workplaces striking
-* 0 – no data or no physical places
+* 0/N – no data or no physical places
 
 #### SN1
 Number of sited involved, e.g distinct manifestations or workplaces striking
 The difference is that the number of sites in NO DATA cases was approximated (if possible) or set to 1
-This allows us to count a 'minimal number of collective actions' in the database
-* N – no physical place
+This allows us to count a 'minimal number of collective actions' in the database.
 
 #### SITE
 Site of protest 
@@ -201,6 +200,7 @@ Claims or issues raised during protest. In most cases the first claim is the maj
 * 21 – domestic policy not concerning work and employment 
 * 22 – cultural and religious issues 
 * 23 – political conflict
+* 24 - labour day march / commemoration
 * 99 – other
 
 #### CLAIMDIR
