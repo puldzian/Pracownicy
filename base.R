@@ -1,14 +1,28 @@
-# Starting environment
-db0 = read.csv("db_WORKERS.csv", header = TRUE)
+# START!
+# Załaduj i odrzuć groźby protestu
+df = read.csv("db_MAINBASE.csv", header = TRUE)
+df = subset(df, type_n==1)
 
-# TODO
-# 1. db2 = baza z TYPE==1 * SN1, czyli faktyczne działania zbiorowe
-# 2. db3 = Rozdzielić związkowców na osobne zmienne
-# 3. Eksploracja częstości w nowym wydaniu
-
-# AD1
-db1 = subset(db0, TYP==1)
-db2 = transform(db1[rep(1:nrow(db1), db1$SN1),-4], SN1=1)
+# Rozdziel wydarzenia na działania zbiorowe:
+# df = transform(df[rep(1:nrow(df), df$site_number),-4],site_number=1)
+# write.csv(df, file = "db_MAIN.csv",)
+# df = read.csv("db_MAIN.csv", header = TRUE)
 
 
-# AD2
+# AD3
+# CZĘSTOŚCI
+freq.ec = table(df$eco, df$year)
+freq.regio = table(df$region, df$year)
+freq.repert = table(df$repert1, df$year)
+
+ftable(freq.ec)
+
+
+# OPPORTUNITIES
+# a) region
+# b) city size
+# c) city importance
+# d) sector of economy
+# d1) mean size of company in that sector
+# e) is actor a trade union
+# f) date: month/season

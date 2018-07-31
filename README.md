@@ -3,19 +3,15 @@ Repository for the project "Union and networks. Workers' protests in Poland, 200
 Lead investigator: Piotr P. Płucienniczak.
 
 ## Repository structure
-* CODEBOOK.md - codebook for the database
-* db_protests - the main database
-* db_selection.ods - news/events counts
-* README.md - this file
+* CODEBOOK - codebook for the database
+* db_MAIN - the main database (records = events * sites) 
+* db_WORKERS - the base, raw database
+* db_SELECTION - news/events counts
+* README - this file
 
 * /papers/ - drafts and papers
+* /sgp2018/ - mats for sgp conference
 * /temp/ - experiments
 * /varia/ - additional materials
 
-
-## Changes
-18.07.26 - changed 99 to N in some cols to better handle NDs, DESC added, cleaning
-
-## Cleaning: TODO
-check PPL of biggest protests
 

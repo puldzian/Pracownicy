@@ -4,34 +4,36 @@ For the project "Union and networks. Workers' protests in Poland, 2004-2014", fu
 
 ## VARIABLES
 
-#### Gw
-Total number of mentions in the source "Gazeta Wyborcza"
+#### id
+Event's ID
 
-#### YR, MN
+#### mentions
+Total number of mentions in "Gazeta Wyborcza"
+
+#### year, month
 Year and month of the event
 
-#### TYP
+#### type
 Type of the event
 * 1 – actual collective action
 * 2 – threat of collective action
 
-#### CITY
+#### city_name
 Location of the event, name of the town. If no city was mentioned:
-* 1-17 – region, see *REGIOAB*
-* 97 – nationwide
-* 99 – no physical place
+* NO - not a city (check region then)
 
-#### CSIZk
+#### city_size
 City size in thousands (k) of population (approximated), based on various sources
-*  0 – not a city
+*  0 - less than 1k
+* NO - not a city
 
-#### CCLASS
+#### city_class
 City class / importance
-*  0 – none
+*  0 – not interesting
 *  3 – voyvodeship capital
-*  N – not a city
+* NO – not a city
 
-#### REGION / REGIOAB
+#### region / region_ab
 Province in which the event took place
 *  1 – DS –  dolnośląskie - lower Silesian
 *  2 – KP – kujawsko-pomorskie - Kuyavian-Pomeranian
@@ -50,21 +52,19 @@ Province in which the event took place
 * 15 – WL – wielkopolskie - Greater Poland
 * 16 – ZP – zachodniopomorskie - West Pomeranian
 * 97 – PL – nationwide
-* NN – NN – no physical place
 
 #### COMPANY
 Name of the company
-*  0 – no data
-* 99 – not a proper company, see GROUP
+* ND – no data
+* NO – not a proper company (see group)
 
 #### GROUP
 Name of the group or category, if no COMPANY specified
-*  0 – no data
-* 99 – not a proper group, maybe check COMPANY
+* ND – no data
+* NO – not a proper group, maybe check COMPANY
 
 #### EC
 Sector of the economy (PKD) 
-*  0 – NODA – no data
 *  1 – AGRI – agriculture, forestry, fishing 
 *  2 – MINI – mining 
 *  3 – MANU – manufactoring and refining 
@@ -85,10 +85,10 @@ Sector of the economy (PKD)
 * 18 – ARTS – arts, sport and culture 
 * 19 – OTHR – other services, members-based organizations 
 * 20 – ATYP – household work, atypical work 
-* 99 – NONE – not an economic actor, not applicable, other
+* NO – NONE – not an economic actor, not applicable, other
 
-#### ACTNAME
-Names of actors involved, separated by '/'. Acronyms used:
+#### actor_name / act_??
+Names of actors involved, separated by '/'. Act_?? are dummy variables for presence of a given actor. Acronyms used:
 * FA - Federacja Anarchistyczna
 * FZZ - Forum Związków Zawodowych
 * IP - OZZ Inicjatywa Pracownicza
@@ -115,10 +115,7 @@ Names of actors involved, separated by '/'. Acronyms used:
 * ZNP - Związek Nauczycielstwa Polskiego
 * ZSMP - Związek Socjalistycznej Młodzieży Polski
 
-#### NSZZ, RZM
-Were NSZZ "Solidarność" or Razem party there?
-
-#### A1, A2
+#### act_type1, act_type2
 Types of actors involved. If more than 2 types of organisations took part, two major or first-mentioned are coded
 *  1 – TUCN – TU central, inter-company organisation
 *  2 – TULC – TU company organisation
@@ -130,11 +127,11 @@ Types of actors involved. If more than 2 types of organisations took part, two m
 *  8 - POLI – political actor
 * 99 - OTHR – other
 
-#### PPL
+#### people
 Number of participants as reported by source "Gazeta Wyborcza"
 
-#### R1, R2
-Repertoire type. If more then 2 types were employed, major or more radical were coded
+#### repert1, repert2
+Repertoire type. If more then 2 types were employed, major or more important were coded
 *  1 – PROT – non-specific protest
 *  2 – STRK – strike
 *  3 – DEMO – demonstration, picket line
@@ -146,7 +143,10 @@ Repertoire type. If more then 2 types were employed, major or more radical were 
 *  9 – OPLE – appeal, petition, open letter
 * 99 – OTHR – other
 
-#### SN0
+
+TUTAJ SKĄCZYŁĘM!LAD
+
+#### site_base
 Number of sited involved, e.g distinct manifestations or workplaces striking
 * 0/N – no data or no physical places
 
