@@ -3,92 +3,90 @@
 For the project "Union and networks. Workers' protests in Poland, 2004-2014", funded by Narodowe Centrum Nauki (National Science Centre, PL), decision number DEC-2015/17/D/HS6/02710. Lead investigator: Piotr P. Płucienniczak.
 
 ## VARIABLES
+NA - no data (R standard)
 
 #### id
 Event's ID
 
-#### mentions
+#### mnts_gw
 Total number of mentions in "Gazeta Wyborcza"
 
-#### year, month
-Year and month of the event
+#### date, year, month
+Year and month of the event. Formats: YYYYMM, YYYY, MM
 
 #### type
-Type of the event
-* 1 – actual collective action
-* 2 – threat of collective action
+Type of the event:
+* protest – actual collective action
+* threat – threat of collective action
 
 #### city_name
 Location of the event, name of the town. If no city was mentioned:
-* NO - not a city (check region then)
+* NOTCITY - not a city (check region then)
 
 #### city_size
 City size in thousands (k) of population (approximated), based on various sources
-*  0 - less than 1k
-* NO - not a city
+* 0 - less than 1k
+* NOTCITY - not a city, not applicable
 
 #### city_class
 City class / importance
-*  0 – not interesting
-*  3 – voyvodeship capital
-* NO – not a city
+* normal – normal town
+* voyvodeship – voyvodeship capital
+* NOTCITY – not a city, not applicable
 
 #### region / region_ab
 Province in which the event took place
-*  1 – DS –  dolnośląskie - lower Silesian
-*  2 – KP – kujawsko-pomorskie - Kuyavian-Pomeranian
-*  3 – LL – lubelskie - Lublin
-*  4 – LS – lubuskie - Lubusz
-*  5 – LO – łódzkie - Łódź
-*  6 – MP – małopolskie - Lesser Poland
-*  7 – MZ – mazowieckie - Mazovian
-*  8 – OP – opolskie - Opole
-*  9 – PK – podkarpackie - Subcarpathian
-* 10 – PD – podlaskie - Podlaskie
-* 11 – PM – pomorskie - Pomeranian
-* 12 – SL – śląskie - Silesian
-* 13 – SK – świetokrzyskie - Świętokrzyskie
-* 14 – WM – warmińsko-mazurskie - Warmian-Masurian
-* 15 – WL – wielkopolskie - Greater Poland
-* 16 – ZP – zachodniopomorskie - West Pomeranian
-* 97 – PL – nationwide
+* DS – dolnośląskie - lower Silesian
+* KP – kujawsko-pomorskie - Kuyavian-Pomeranian
+* LL – lubelskie - Lublin
+* LS – lubuskie - Lubusz
+* LO – łódzkie - Łódź
+* MP – małopolskie - Lesser Poland
+* MZ – mazowieckie - Mazovian
+* OP – opolskie - Opole
+* PK – podkarpackie - Subcarpathian
+* PD – podlaskie - Podlaskie
+* PM – pomorskie - Pomeranian
+* SL – śląskie - Silesian
+* SK – świetokrzyskie - Świętokrzyskie
+* WM – warmińsko-mazurskie - Warmian-Masurian
+* WL – wielkopolskie - Greater Poland
+* ZP – zachodniopomorskie - West Pomeranian
+* PL – nationwide
 
-#### COMPANY
+#### company_name
 Name of the company
-* ND – no data
-* NO – not a proper company (see group)
+* NOTCOMPANY – not a proper company (maybe see group)
 
-#### GROUP
-Name of the group or category, if no COMPANY specified
-* ND – no data
-* NO – not a proper group, maybe check COMPANY
+#### group_name
+Name of the group or category protesting, if no COMPANY specified
+* NOGROUP – not a proper group, maybe check COMPANY
 
-#### EC
-Sector of the economy (PKD) 
-*  1 – AGRI – agriculture, forestry, fishing 
-*  2 – MINI – mining 
-*  3 – MANU – manufactoring and refining 
-*  4 – ELGW – electricity, gas, hot air and water 
-*  5 – WAWA – water supply and waste management 
-*  6 – CNST – construction 
-*  7 – TRRE – trade and repair 
-*  8 – TRAN – transport, postal services and storage 
-*  9 – ACCO – accommodation and catering 
-* 10 – INFO – information (publishing, broadcasting) and communication 
-* 11 – FINA – finance and insurance 
-* 12 – REES – real estate 
-* 13 – ACTI – scientific and professional activities, advertising and advising 
-* 14 – ADMI – administrative and support, cleaning, call centers, human resources 
-* 15 – PUBL – public administration, social services and defense 
-* 16 – EDUC – education 
-* 17 – HLTH – health care and social work 
-* 18 – ARTS – arts, sport and culture 
-* 19 – OTHR – other services, members-based organizations 
-* 20 – ATYP – household work, atypical work 
-* NO – NONE – not an economic actor, not applicable, other
+#### eco
+Sector of the economy (number is a PKD category) 
+* agriculture - 1 – agriculture, forestry, fishing 
+* mining - 2 – mining 
+* manufactoring - 3 – manufactoring and refining 
+* energy - 4 – electricity, gas, hot air and water 
+* waterwaste - 5 – water supply and waste management 
+* construction - 6 – construction 
+* traderepair - 7 – trade and repair 
+* transportpost - 8 – transport, postal and storage 
+* accomidation - 9 – accommodation and catering 
+* information - 10 – information and communication 
+* finance - 11 finance and insurance 
+* realestate - 12 – real estate 
+* professional - 13 - scientific and professional activities, advertising and advising 
+* adminsupport - 14 – administrative and support, cleaning, call centers, human resources 
+* publicsocial - 15 – public administration, social services and defense 
+* education - 16 – education 
+* healthsocial - 17 – health care and social work 
+* sportculture - 18 - arts, sport and culture 
+* household – household work, atypical work 
+* NOTCOMPANY – not an economic actor, not applicable
 
-#### actor_name / act_??
-Names of actors involved, separated by '/'. Act_?? are dummy variables for presence of a given actor. Acronyms used:
+#### actors_all / act_??
+Names of all actors involved, separated by ' '. Act_?? are dummy variables for presence of a given actor. Acronyms used:
 * FA - Federacja Anarchistyczna
 * FZZ - Forum Związków Zawodowych
 * IP - OZZ Inicjatywa Pracownicza
@@ -115,124 +113,114 @@ Names of actors involved, separated by '/'. Act_?? are dummy variables for prese
 * ZNP - Związek Nauczycielstwa Polskiego
 * ZSMP - Związek Socjalistycznej Młodzieży Polski
 
+#### actor1, actor2
+Name of the organiser and secondary organiser of a given event, used to identify the responsible actor
+
 #### act_type1, act_type2
 Types of actors involved. If more than 2 types of organisations took part, two major or first-mentioned are coded
-*  1 – TUCN – TU central, inter-company organisation
-*  2 – TULC – TU company organisation
-*  3 - NOTU – non-TU workers' organisation
-*  4 - WRKR – workers, no organisation mentioned
-*  5 - ATYP – atypical workers, unemployed
-*  6 - COMM – local communities, workers' families
-*  7 - SOCM – social movement, civil society organisation
-*  8 - POLI – political actor
-* 99 - OTHR – other
+* atypical – atypical workers, unemployed
+* community – local communities, workers' families
+* movement – social movement, civil society organisation
+* nonorganised – workers, no organisation mentioned
+* nonunion – non-TU workers' organisation
+* other – other
+* political – political actor
+* unioncentral – TU central, inter-company organisation
+* unionlocal – TU company organisation
 
 #### people
 Number of participants as reported by source "Gazeta Wyborcza"
 
 #### repert1, repert2
 Repertoire type. If more then 2 types were employed, major or more important were coded
-*  1 – PROT – non-specific protest
-*  2 – STRK – strike
-*  3 – DEMO – demonstration, picket line
-*  4 – BLOC – blockade, occupation
-*  5 – DISO – disobedience, slowdown, resignation
-*  6 – DRST – hunger protest, drastic acts
-*  7 – LGLA – legal action
-*  8 – CMPG – agitation, social campaign
-*  9 – OPLE – appeal, petition, open letter
-* 99 – OTHR – other
-
-
-TUTAJ SKĄCZYŁĘM!LAD
+* agitation - agitation, social campaign
+* appeal - appeal, petition, open letter
+* blockade – blockade, occupation
+* demonstration – demonstration, picket line
+* drastic – hunger protest, self-immolation, drastic acts
+* legal – legal action, mass suits
+* nonspecific - unspecified form of protest
+* slowdown - disobedience, slowdown, resignation
+* strike - strike (as reported in the press)
 
 #### site_base
 Number of sited involved, e.g distinct manifestations or workplaces striking
-* 0/N – no data or no physical places
 
-#### SN1
+#### site_number
 Number of sited involved, e.g distinct manifestations or workplaces striking
 The difference is that the number of sites in NO DATA cases was approximated (if possible) or set to 1
 This allows us to count a 'minimal number of collective actions' in the database.
 
 #### SITE
 Site of protest 
-* 1 – COMP – company premises 
-* 2 – CNST – central state institution 
-* 3 – RGST – regional state institution 
-* 4 – OTST – other state or institution 
-* 5 – PUBL – public space
-* 6 – INFR – roads, rails, infrastructure
-* 9 – MDIA – media, social media, no physical place
+* company – company premises
+* infrastructure - roads, rails, infrastructure
+* media - media, social media, no physical place
+* publicspace – public space, square or street
+* statecentral - central state institution
+* statelocal - regional state institution (voyvodeship or lower)
+* stateother - other type of state institution, courts
 
 #### DURATION
 Duration of the protest
-*  1 – 2H – up to 2 hours 
-*  2 – 12 – up to 12 hours 
-*  3 – 24 – up to 24 hours 
-*  4 – 48 – up to 48 hours 
-*  5 – 1W – up to 1 week 
-*  6 – 2W – up to 2 weeks 
-*  7 – 1M – up to 1 month 
-*  8 – 3M – up to 3 months 
-*  9 – 9M – more than 3 months 
-* 99 – NO – not bound by time
+* h2 – up to 2 hours 
+* h12 – up to 12 hours 
+* h24 – up to 24 hours 
+* h48 – up to 48 hours 
+* w1 – up to 1 week 
+* w2 – up to 2 weeks 
+* m1 – up to 1 month 
+* m3 – up to 3 months 
+* y1 – more than 3 months 
+* timeless – not bound by time
 
-#### CLAIM1 / CLAIM2
-Claims or issues raised during protest. In most cases the first claim is the major one.
-*  1 – wage and other material gratification 
-*  2 – government policy towards company 
-*  3 – management policy 
-*  4 – personal changes in management 
-*  5 – collective agreements and guarantees 
-*  6 – right to unionize 
-*  7 – social dialogue 
-*  8 – anti-privatization 
-*  9 – pro-privatization 
-* 10 – layoffs 
-* 11 – pay due salary 
-* 12 – bankruptcy or liquidation 
-* 13 – atypical forms of employment 
-* 14 – conditions of work
-* 15 – investment
-* 16 – pension rights 
-* 20 – domestic policy concerning work and employment 
-* 21 – domestic policy not concerning work and employment 
-* 22 – cultural and religious issues 
-* 23 – political conflict
-* 24 - labour day march / commemoration
-* 99 – other
+#### claim1 / claim2
+Claims or issues raised during protest. The first claim is the major one.
+* atypical – atypical forms of employment
+* bankrupcy – bankruptcy or liquidation 
+* collagreement – collective agreements and guarantees 
+* commemoration - commemoration, labour day
+* conditions - conditions of work
+* dialogue - social dialogue, need for negotiations
+* duesalary - pay of due salaries
+* govtpolicycompany - govt policy towards company
+* govtpolicyother - govt policy not concerning work and employment
+* govtpolicywork - domestic policy concerning work and employment 
+* investment 
+* layoffs - layoffs
+* managepersonal - personal changes in the management
+* managepolicy - company's management policies
+* other - other, check claim_name
+* pension - pension rights or age
+* political - political issue, parliamentary conflict
+* privatisationanti - stop privatisation
+* privatisationpro - we need privatisation
+* unionize - right to unionze or freedom of union operations
+* wage - claims related to wage, its height or other bonuses
 
-#### CLAIMDIR
+#### direction
 Direction of the claim, Marx or Polanyi-type protest
-* 1 – workers’ initiative, offensive, ‘give more’, ‘do it’ 
-* 2 – reaction to other actors’ actions, defensive, ‘do not take’, ‘do not do it’
+* defense – reaction to other actors’ actions, defensive, ‘do not take’, ‘do not do it’
+* offense – workers’ initiative, offensive, ‘give more’, ‘do it’ 
 
-#### RS 
+
+#### response
 Response of the target 
-* 1 – POS – positive, agrees, wants to continue talks, accepts claims
-* 2 – NEU – neutral, acknowledges protest, does not comment on claims
-* 3 – NEG – negative, disagrees, breaks talks, dismisses claims, takes action against protesters
+* positive – positive, agrees, wants to continue talks, accepts claims
+* unclear – neutral, acknowledges protest, does not comment on claims
+* negative – negative, disagrees, breaks talks, dismisses claims, takes action against protesters
 
-#### VANDA
+#### vandalism
 Violence towards inanimate objects was used during the event
-* 0 - NO
-* 1 - YES
 
-#### VIOLE
+#### violence
 Violence towads people was used
-* 0 - NO
-* 1 - YES
 
-#### INTER
+#### international
 Event was an act of international cooperation
-* 0 - NO
-* 1 - YES
 
-#### SOLID
+#### solidarity
 Acts of solidary were sent or received by organisers (to/from other actors/groups)
-* 0 - NO
-* 1 - YES
 
-#### DESC
-Just a description
+#### extra
+Just a description or additional info
